@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head><title>Frontend</title></head>
+<body>
+    <h1>Hello from Frontend!</h1>
+    <p>API says: <span id="api-response"></span></p>
+    <script>
+        fetch("/api")
+            .then(res => res.json())
+            .then(data => {
+                document.getElementById("api-response").textContent = data.message;
+            });
+    </script>
+</body>
+</html>
